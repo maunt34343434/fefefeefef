@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP Generator - Калькулятор часов РО</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Модуль расчёта часов РО</h1>
+            <p>Система автоматизированной разработки рабочих учебных программ</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Результат обучения: РО 10.1</h2>
+                <p class="subtitle">Разработка серверных приложений с использованием Node.js</p>
+
+                <div class="limit-box">
+                    <span>Установленный лимит часов:</span>
+                    <strong id="targetHours">72</strong> ч.
+                </div>
+
+                <div class="inputs-grid">
+                    <div class="input-group">
+                        <label for="theoryHours">Теоретические часы:</label>
+                        <input type="number" id="theoryHours" value="24" min="0">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="practiceHours">Практические часы:</label>
+                        <input type="number" id="practiceHours" value="36" min="0">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="selfHours">Самостоятельная работа:</label>
+                        <input type="number" id="selfHours" value="8" min="0">
+                    </div>
+                </div>
+
+                <div class="result-section" id="resultSection">
+                    <div class="stat-row">
+                        <span>Распределено часов:</span>
+                        <strong id="totalDistributed">68</strong> ч.
+                    </div>
+                    <div class="stat-row">
+                        <span>Остаток / Баланс:</span>
+                        <strong id="balanceText">Осталось распределить: 4 ч.</strong>
+                    </div>
+                    <div class="alert-box" id="alertBox">
+                        ⚠️ Сумма часов меньше установленного количества!
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
